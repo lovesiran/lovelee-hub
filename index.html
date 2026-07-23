@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LoveLee — 일상생활 APP PJT</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Pretendard:wght@400;500;600&display=swap');
+
+  :root{
+    --cream:#F5F4F0;
+    --ink:#20222F;
+    --slate:#3D405B;
+    --slate-soft:#8B8DA8;
+    --line: rgba(32,34,47,0.12);
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Pretendard', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:880px;
+    margin:0 auto;
+    padding:96px 24px 120px;
+  }
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:0.14em;
+    color:var(--slate-soft);
+    text-transform:uppercase;
+    margin:0 0 18px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(36px, 6vw, 58px);
+    line-height:1.08;
+    margin:0 0 20px;
+    letter-spacing:-0.01em;
+  }
+  h1 em{
+    font-style:italic;
+    color:var(--slate);
+  }
+  .lead{
+    font-size:17px;
+    line-height:1.65;
+    color:#4A4C5E;
+    max-width:520px;
+    margin:0 0 64px;
+  }
+  .section-label{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin:0 0 24px;
+  }
+  .section-label .num{
+    font-family:'Fraunces', serif;
+    font-size:14px;
+    color:var(--slate-soft);
+  }
+  .section-label h2{
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:0;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:20px;
+    margin-bottom:72px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:28px;
+    text-decoration:none;
+    color:inherit;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    transition:transform 0.18s ease, border-color 0.18s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    border-color:var(--slate);
+  }
+  .icon-tile{
+    width:52px;
+    height:52px;
+    border-radius:14px;
+    background:var(--slate);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--cream);
+    font-family:'Fraunces', serif;
+    font-size:20px;
+    font-weight:600;
+  }
+  .card h3{
+    font-size:19px;
+    font-weight:600;
+    margin:0;
+  }
+  .card p{
+    font-size:14.5px;
+    line-height:1.6;
+    color:#63647A;
+    margin:0;
+    flex-grow:1;
+  }
+  .card .tags{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .tag{
+    font-size:11.5px;
+    padding:4px 10px;
+    border-radius:100px;
+    background:rgba(61,64,91,0.08);
+    color:var(--slate);
+  }
+  .card .go{
+    font-size:13px;
+    font-weight:500;
+    color:var(--slate);
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .card.placeholder{
+    border-style:dashed;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--slate-soft);
+    min-height:200px;
+  }
+  .card.placeholder .icon-tile{
+    background:transparent;
+    border:1.5px dashed var(--line);
+    color:var(--slate-soft);
+  }
+  .card.placeholder p{
+    color:var(--slate-soft);
+  }
+  footer{
+    border-top:1px solid var(--line);
+    padding-top:28px;
+    font-size:13px;
+    color:var(--slate-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  footer a{
+    color:var(--slate);
+    text-decoration:none;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">LoveLee</p>
+    <h1>우리가 필요해서 만든 앱들입니다.<br><em>모두 함께 쓰면 더 좋아요!</em></h1>
+    <p class="lead">LoveLee의 일상생활 앱 프로젝트 모음입니다. 필요해서 만들고, 쓰면서 다듬은 앱들을 여기 모아둡니다.</p>
+
+    <div class="grid">
+      <a class="card" href="https://ordo.bylovelee.com" target="_blank" rel="noopener">
+        <div class="icon-tile">O</div>
+        <h3>Ordo Todo</h3>
+        <p>손글씨, 위젯, 캘린더 연동까지 담은 할 일 관리 앱. 혼자서도, 함께여도 쓸 수 있어요.</p>
+        <div class="tags">
+          <span class="tag">Android</span>
+          <span class="tag">생산성</span>
+        </div>
+        <span class="go">플레이스토어에서 보기 →</span>
+      </a>
+
+      <!-- 다음 앱 추가 시 아래 형식으로 카드 하나 복사해서 붙여넣기 -->
+      <!--
+      <a class="card" href="https://다음앱주소" target="_blank" rel="noopener">
+        <div class="icon-tile">첫글자</div>
+        <h3>앱 이름</h3>
+        <p>한 줄 소개</p>
+        <div class="tags"><span class="tag">카테고리</span></div>
+        <span class="go">자세히 보기 →</span>
+      </a>
+      -->
+
+      <div class="card placeholder">
+        <div class="icon-tile">+</div>
+        <h3 style="color:var(--slate-soft);">다음 앱 준비 중</h3>
+        <p>새 프로젝트가 여기 채워질 예정입니다.</p>
+      </div>
+    </div>
+
+    <footer>
+      <span>© 2026 LoveLee</span>
+      <a href="mailto:support.lovelee@gmail.com">support.lovelee@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
