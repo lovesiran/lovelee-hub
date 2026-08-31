@@ -140,22 +140,6 @@
     align-items:center;
     gap:6px;
   }
-  .card.placeholder{
-    border-style:dashed;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:var(--slate-soft);
-    min-height:200px;
-  }
-  .card.placeholder .icon-tile{
-    background:transparent;
-    border:1.5px dashed var(--line);
-    color:var(--slate-soft);
-  }
-  .card.placeholder p{
-    color:var(--slate-soft);
-  }
   footer{
     border-top:1px solid var(--line);
     padding-top:28px;
@@ -170,6 +154,20 @@
     color:var(--slate);
     text-decoration:none;
   }
+  .card-links{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.card-links a{
+  text-decoration:none;
+}
+
+.card .go.secondary{
+  color:var(--slate-soft);
+}
 </style>
 </head>
 <body>
